@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Sticky Nav</title>
-    <link rel="stylesheet" href="style-START.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style-FINISHED.css" />
   </head>
   <body>
     <header>
@@ -102,9 +102,7 @@
         aspernatur pariatur fugit quibusdam dolores sunt esse magni, ut,
         dignissimos.
       </p>
-
       <img src="http://unsplash.it/400/400" class="align-left slide-in" />
-
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates,
         deserunt facilis et iste corrupti omnis tenetur est. Iste ut est dicta
@@ -119,9 +117,7 @@
         quas quos et aperiam aut doloremque optio maxime fugiat doloribus. Eum
         dolorum expedita quam, nesciunt
       </p>
-
       <img src="http://unsplash.it/400/400" class="align-right slide-in" />
-
       <p>
         at provident praesentium atque quas rerum optio dignissimos repudiandae
         ullam illum quibusdam. Vel ad error quibusdam, illo ex totam placeat.
@@ -156,7 +152,6 @@
         eaque. Aperiam, qui ut tenetur, voluptate doloremque officiis dicta
         quaerat voluptatem rerum natus magni. Eum amet autem dolor ullam.
       </p>
-
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
         maiores adipisci quibusdam repudiandae dolor vero placeat esse sit!
@@ -193,9 +188,7 @@
         porro officiis, amet! Molestias, fugit, ut! Tempore non magnam, amet,
         facere ducimus accusantium eos veritatis neque.
       </p>
-
       <img src="http://unsplash.it/400/400" class="align-right slide-in" />
-
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
         maiores adipisci quibusdam repudiandae dolor vero placeat esse sit!
@@ -271,18 +264,20 @@
     </div>
 
     <script>
-      const nav = document.querySelector("main");
-      const topOfNav = nav.offsetTop;
+      // Not a ton of code, but hard to
+      const nav = document.querySelector("#main");
+      let topOfNav = nav.offsetTop;
 
       function fixNav() {
         if (window.scrollY >= topOfNav) {
           document.body.style.paddingTop = nav.offsetHeight + "px";
           document.body.classList.add("fixed-nav");
         } else {
-          document.body.style.paddingTop = 0;
           document.body.classList.remove("fixed-nav");
+          document.body.style.paddingTop = 0;
         }
       }
+
       window.addEventListener("scroll", fixNav);
     </script>
   </body>
