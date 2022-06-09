@@ -262,7 +262,7 @@
 
     <script>
       const triggers = document.querySelectorAll(".cool > li");
-      const backround = document.querySelectorAll(".dropdownBackground");
+      const background = document.querySelector(".dropdownBackground");
       const nav = document.querySelector(".top");
 
       function handleEnter() {
@@ -285,6 +285,7 @@
           top: dropdownCoords.top - navCoords.top,
           left: dropdownCoords.left - navCoords.left,
         };
+
         background.style.setProperty("width", `${coords.width}px`);
         background.style.setProperty("height", `${coords.height}px`);
         background.style.setProperty(
