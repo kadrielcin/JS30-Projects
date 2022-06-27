@@ -19,7 +19,7 @@ function timer(seconds) {
       clearInterval(countdown);
       return;
     }
-    // display it
+    // display it!
     displayTimeLeft(secondsLeft);
   }, 1000);
 }
