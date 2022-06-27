@@ -1,5 +1,5 @@
 let countdown;
-const timerDispaly = document.querySelector(".display__time-left");
+const timerDisplay = document.querySelector(".display__time-left");
 const endTime = document.querySelector(".display__end-time");
 const buttons = document.querySelectorAll("[data-time]");
 
@@ -14,12 +14,12 @@ function timer(seconds) {
 
   countdown = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
-    // check of we should stop it!
+    // check if we should stop it!
     if (secondsLeft < 0) {
       clearInterval(countdown);
       return;
     }
-    // display it!
+    // display it
     displayTimeLeft(secondsLeft);
   }, 1000);
 }
@@ -39,18 +39,18 @@ function displayEndTime(timestamp) {
   const hour = end.getHours();
   const adjustedHour = hour > 12 ? hour - 12 : hour;
   const minutes = end.getMinutes();
-  endTime.textContent = `Be back At ${adjustedHour}:${
+  endTime.textContent = `Be Back At ${adjustedHour}:${
     minutes < 10 ? "0" : ""
-  }$(minutes)`;
+  }${minutes}`;
 }
 
 function startTimer() {
-  const seconds = parselInt(this.dataset.time);
+  const seconds = parseInt(this.dataset.time);
   timer(seconds);
 }
 
 buttons.forEach((button) => button.addEventListener("click", startTimer));
-document.customform.addEventListener("submit", function (e) {
+document.customForm.addEventListener("submit", function (e) {
   e.preventDefault();
   const mins = this.minutes.value;
   console.log(mins);
